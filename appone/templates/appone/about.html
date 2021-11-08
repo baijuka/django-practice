@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>About {{ user }}</h2>
+<p> ipsum dolor sit amet consectetur adipisicing elit. Corporis quae asperiores quos quo voluptatibus quibusdam ipsum et 
+    atione enim voluptatum deserunt voluptate, reiciendis aliquid, iusto corrupti at. Fugit, vel explicabo.
+</p>
+<table>
+    <tr>
+        <th>Fruit</th>
+        <th>Price</th>
+        <th>Origin</th>
+    </tr>
+    {% for i in item %}
+    <tr>
+        <td>{{i.name}}</td>
+        <td>{{i.price}}</td>
+        <td>{{i.origin}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
